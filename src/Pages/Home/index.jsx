@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../Components/Header";
 import NavHheader from "../../Components/NavHeader";
 import i18n from "../../i18n";
@@ -10,10 +10,14 @@ import { useLocation, useHistory } from 'react-router-dom';
 const lngs = {
     en: { nativeName: 'English' },
     de: { nativeName: 'Deutsch' },
-    chi: { nativeName: 'Chinese' }
+    chi: { nativeName: 'Chinese' },
+    ar: { nativeName: 'Arabic' }
 };
 
 const Home = () => {
+    const [currentLanguage, setCurrentLanguage] = useState("");
+    const [change, setChange] = useState(true);
+
     const { t } = useTranslation();
 
     const history = useHistory();
@@ -21,6 +25,7 @@ const Home = () => {
     // const { pathname } = location;
 
     const changeTheLanguage = (e) => {
+        setCurrentLanguage(e);
         i18n.changeLanguage(e);
         if (e === 'de') {
             history.push(`/${e}`);
@@ -31,17 +36,41 @@ const Home = () => {
         else if (e === 'chi') {
             history.push(`/${e}`);
         }
+        else if (e === 'ar') {
+            history.push(`/${e}`);
+        }
         //alert("Changed");
     }
 
     useEffect(() => {
-
+        if (change) {
+            if (window.location.pathname === '/de') {
+                i18n.changeLanguage("de");
+//                alert("de")
+                setChange(false);
+            }
+            else if (window.location.pathname === '/en') {
+                i18n.changeLanguage("en");
+//                alert("en");
+                setChange(false);
+            }
+            else if (window.location.pathname === '/chi') {
+                i18n.changeLanguage("chi");
+//                alert("chi")
+                setChange(false);
+            }
+            else if (window.location.pathname === '/ar') {
+                i18n.changeLanguage("ar");
+//                alert("ar")
+                setChange(false);
+            }
+        }
     })
 
     return (
         <>
             <Header />
-            <NavHheader Nav="Product" text="All Products" />
+            <NavHheader />
             <div className="container mt-4 border">
                 <div>
                     {Object.keys(lngs).map((lng) => (

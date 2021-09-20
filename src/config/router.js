@@ -11,6 +11,7 @@ class AppRouter extends React.Component {
                 <Route exact path="/en" component={Home} />
                 <Route exact path="/de" component={Home} />
                 <Route exact path="/chi" component={Home} />
+                <Route exact path="/ar" component={Home} />
             </Router>
         )
     }
