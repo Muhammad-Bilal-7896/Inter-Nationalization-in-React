@@ -8,6 +8,9 @@ class AppRouter extends React.Component {
         return (
             <Router>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/en" component={Home} />
+                <Route exact path="/de" component={Home} />
+                <Route exact path="/chi" component={Home} />
             </Router>
         )
     }
