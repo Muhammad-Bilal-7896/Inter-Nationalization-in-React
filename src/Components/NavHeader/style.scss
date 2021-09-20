@@ -1,0 +1,153 @@
+$DarkColor: #000000;
+$GreyColor: #e4e2fc;
+
+// This is the Navigation Header Components
+.NavHeader1 {
+    height: 60px;
+    border-top: 1px solid rgb(199, 199, 199);
+    background-color: $GreyColor;
+}
+.NavHeader2 {
+    height: 60px;
+    border-top: 1px solid rgb(199, 199, 199);
+    background-color: $GreyColor;
+}
+.NavHeader3 {
+    height: 60px;
+    border-top: 1px solid rgb(199, 199, 199);
+    background-color: $GreyColor;
+}
+.NavHeader4 {
+    height: 60px;
+    border-top: 1px solid rgb(199, 199, 199);
+    background-color: $GreyColor;
+}
+// This is the Navigation Header Components
+.RightArrow {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+.navheader-text {
+    color: $DarkColor !important;
+    font-weight: 500;
+    font-size: 20px !important;
+    line-height: 60px;
+    cursor: pointer;
+}
+.navTextDiv {
+    padding-left: 40px;
+}
+@media all and (max-width: 1117px) {
+    .NavHeader4 {
+        height: 130px !important;
+        line-height: 20px;
+    }
+}
+@media all and (max-width: 947px) {
+    .RightArrow {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+}
+@media all and (max-width: 887px) {
+    .NavHeader1 {
+        height: 60px;
+        line-height: 60px !important;
+    }
+    .NavHeader2 {
+        height: 60px;
+        line-height: 60px !important;
+    }
+    .NavHeader3 {
+        height: 100px;
+        line-height: 50px;
+    }
+    .NavHeader4 {
+        height: 100px !important;
+        line-height: 50px;
+    }
+    .navheader-text {
+        line-height: initial;
+        cursor: pointer;
+        // border: 1px solid black;
+    }
+}
+@media all and (max-width: 600px) {
+    .NavHeader1 {
+        height: 60px;
+        line-height: 40px !important;
+    }
+    .NavHeader2 {
+        height: 80px;
+        line-height: 30px;
+    }
+    .NavHeader3 {
+        height: 80px;
+        line-height: 30px;
+    }
+    .NavHeader4 {
+        height: 110px !important;
+        line-height: 30px;
+    }
+    .navheader-text {
+        line-height: initial;
+        cursor: pointer;
+        // border: 1px solid black;
+    }
+    .navTextDiv {
+        padding-top: 10px !important;
+    }
+    .RightArrow {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}
+@media all and (max-width: 487px) {
+    .NavHeader1 {
+        height: 60px;
+        line-height: 40px !important;
+    }
+    .NavHeader2 {
+        height: 80px;
+        line-height: 30px !important;
+    }
+    .NavHeader3 {
+        height: 110px;
+        line-height: 30px;
+    }
+    .NavHeader4 {
+        height: 115px !important;
+        line-height: 30px;
+    }
+}
+@media all and (max-width: 443px) {
+    .NavHeader4 {
+        height: 140px !important;
+        line-height: 30px;
+    }
+}
+@media all and (max-width: 359px) {
+    .NavHeader1 {
+        height: 60px;
+        line-height: 40px !important;
+    }
+    .NavHeader2 {
+        height: 80px;
+        line-height: 30px !important;
+    }
+    .NavHeader3 {
+        height: 140px;
+        line-height: 30px;
+    }
+}
+@media all and (max-width: 324px) {
+    .NavHeader4 {
+        height: 170px !important;
+        line-height: 30px;
+    }
+}
+@media all and (max-width: 300px) {
+    .navTextDiv {
+        padding-left: 20px;
+    }
+}
