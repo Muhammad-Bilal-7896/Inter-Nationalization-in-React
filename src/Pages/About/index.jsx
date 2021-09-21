@@ -14,7 +14,7 @@ const lngs = {
     ar: { nativeName: 'Arabic' }
 };
 
-const Home = () => {
+const About = () => {
     const [currentLanguage, setCurrentLanguage] = useState("");
     const [change, setChange] = useState(true);
 
@@ -46,22 +46,22 @@ const Home = () => {
         if (change) {
             if (window.location.pathname === '/de') {
                 i18n.changeLanguage("de");
-//                alert("de")
+                // alert("de")
                 setChange(false);
             }
             else if (window.location.pathname === '/en' || window.location.pathname === '/') {
                 i18n.changeLanguage("en");
-//                alert("en");
+                // alert("en")
                 setChange(false);
             }
             else if (window.location.pathname === '/chi') {
                 i18n.changeLanguage("chi");
-//                alert("chi")
+                // alert("chi")
                 setChange(false);
             }
             else if (window.location.pathname === '/ar') {
                 i18n.changeLanguage("ar");
-//                alert("ar")
+                // alert("ar")
                 setChange(false);
             }
         }
@@ -71,6 +71,9 @@ const Home = () => {
         <>
             <Header />
             <NavHheader />
+            <hr />
+            <h1 className="text-danger container">This is About Page</h1>
+            <hr />
             <div className="container mt-4 border">
                 <div>
                     {Object.keys(lngs).map((lng) => (
@@ -97,8 +100,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-                                 <br />
+            <br />
         </>
     )
 }
-export default Home;
+export default About;
