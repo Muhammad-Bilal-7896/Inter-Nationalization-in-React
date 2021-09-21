@@ -25,7 +25,9 @@ i18n
                         Nav:'Internationalization in React',
                         head:'Welcome to React Translater',
                         url:'about',
-                        home:'home'
+                        home:'home',
+                        subHome:'This is the Home Page',
+                        subAbout:'This is About Page'
                     }
                 }
             },
@@ -37,7 +39,9 @@ i18n
                         Nav:'Internationalisierung in React',
                         head:'Willkommen bei React Translater',
                         url:'Über',
-                        home:'Heimat'
+                        home:'Heimat',
+                        subHome:'Dies ist die Homepage',
+                        subAbout:'Dies ist die Seite'
                     }
                 }
             },
@@ -49,7 +53,9 @@ i18n
                         Nav:'React 中的国际化',
                         head:'欢迎使用 React 翻译器',
                         url:'关于',
-                        home:'家'
+                        home:'家',
+                        subHome:'这是主页',
+                        subAbout:'这是关于页面'
                     }
                 }
             },
@@ -61,7 +67,9 @@ i18n
                         Nav:'التدويل في React',
                         head:'مرحبًا بك في React',
                         url:'حول',
-                        home:'الصفحة الرئيسية'
+                        home:'الصفحة الرئيسية',
+                        subHome:'هذه هي الصفحة الرئيسية',
+                        subAbout:'هذا عن الصفحة'
                     }
                 }
             }

@@ -72,7 +72,7 @@ const About = () => {
             <Header />
             <NavHheader />
             <hr />
-            <h1 className="text-danger container">This is About Page</h1>
+            <h1 className="text-danger container">{t('description.subAbout')}</h1>
             <hr />
             <div className="container mt-4 border">
                 <div>

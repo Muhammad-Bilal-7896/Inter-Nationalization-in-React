@@ -72,7 +72,7 @@ const Home = () => {
             <Header />
             <NavHheader />
             <hr />
-            <h1 className="text-success container">This is the Home Page</h1>
+            <h1 className="text-success container">{t('description.subHome')}</h1>
             <hr />
             <div className="container mt-4 border">
                 <div>
