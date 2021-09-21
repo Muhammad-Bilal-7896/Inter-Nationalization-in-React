@@ -18,7 +18,7 @@ const Header = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <Link className="navbar-brand navbar-text" to='/'>{t('description.head')}</Link>
+                    <Link className="navbar-brand navbar-text" to='/'>{t('description.Nav')}</Link>
                     <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fas fa-bars" />
                     </button>
