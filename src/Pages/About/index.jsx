@@ -44,22 +44,22 @@ const About = () => {
 
     useEffect(() => {
         if (change) {
-            if (window.location.pathname === '/de') {
+            if (window.location.pathname === '/de/Über') {
                 i18n.changeLanguage("de");
                 // alert("de")
                 setChange(false);
             }
-            else if (window.location.pathname === '/en' || window.location.pathname === '/') {
+            else if (window.location.pathname === '/en/about' || window.location.pathname === '/about') {
                 i18n.changeLanguage("en");
                 // alert("en")
                 setChange(false);
             }
-            else if (window.location.pathname === '/chi') {
+            else if (window.location.pathname === '/chi/关于') {
                 i18n.changeLanguage("chi");
                 // alert("chi")
-                setChange(false);
+                setChange(~false);
             }
-            else if (window.location.pathname === '/ar') {
+            else if (window.location.pathname === '/ar/حول') {
                 i18n.changeLanguage("ar");
                 // alert("ar")
                 setChange(false);
