@@ -28,16 +28,16 @@ const About = () => {
         setCurrentLanguage(e);
         i18n.changeLanguage(e);
         if (e === 'de') {
-            history.push(`/${e}`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         else if (e === 'en') {
-            history.push(`/${e}`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         else if (e === 'chi') {
-            history.push(`/${e}`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         else if (e === 'ar') {
-            history.push(`/${e}`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         //alert("Changed");
     }

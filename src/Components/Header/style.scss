@@ -7,8 +7,13 @@ $PrimaryColor:#1D09EA;
     font-size: 30px !important;
     margin-left: 70px;
     cursor:text;
+    margin-right: 20%;
 }
-
+.nav-link
+{
+    font-size: 20px !important;
+    text-transform:capitalize !important;
+}
 @media all and (max-width:375px)
 {
     .navbar-text

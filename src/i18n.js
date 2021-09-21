@@ -24,7 +24,8 @@ i18n
                         part2: 'Learn React',
                         Nav:'Internationalization in React',
                         head:'Welcome to React Translater',
-                        url:'about'
+                        url:'about',
+                        home:'home'
                     }
                 }
             },
@@ -35,7 +36,8 @@ i18n
                         part2: 'Lerne React',
                         Nav:'Internationalisierung in React',
                         head:'Willkommen bei React Translater',
-                        url:'Über'
+                        url:'Über',
+                        home:'Heimat'
                     }
                 }
             },
@@ -46,7 +48,8 @@ i18n
                         part2: '学习反应',
                         Nav:'React 中的国际化',
                         head:'欢迎使用 React 翻译器',
-                        url:'关于'
+                        url:'关于',
+                        home:'家'
                     }
                 }
             },
@@ -57,7 +60,8 @@ i18n
                         part2: 'تعلم React',
                         Nav:'التدويل في React',
                         head:'مرحبًا بك في React',
-                        url:'حول'
+                        url:'حول',
+                        home:'الصفحة الرئيسية'
                     }
                 }
             }
