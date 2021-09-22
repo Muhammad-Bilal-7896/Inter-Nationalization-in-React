@@ -5,6 +5,9 @@ import { useTranslation, Trans } from 'react-i18next';
 import { Link } from "react-router-dom";
 import "./style.scss";
 
+//Setting the use history hook
+import { useLocation, useHistory } from 'react-router-dom';
+
 const lngs = {
     en: { nativeName: 'English' },
     de: { nativeName: 'Deutsch' },
@@ -14,6 +17,9 @@ const lngs = {
 
 const Header = () => {
     const { t } = useTranslation();
+
+    const history = useHistory();
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
