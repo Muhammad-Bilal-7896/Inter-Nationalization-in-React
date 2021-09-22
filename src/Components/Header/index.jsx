@@ -1,24 +1,14 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import i18n from "../../i18n";
 //Importing useTranslation and Trans from react-i18next
 import { useTranslation, Trans } from 'react-i18next';
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-//Setting the use history hook
-import { useLocation, useHistory } from 'react-router-dom';
-
-const lngs = {
-    en: { nativeName: 'English' },
-    de: { nativeName: 'Deutsch' },
-    chi: { nativeName: 'Chinese' },
-    ar: { nativeName: 'Arabic' }
-};
-
 const Header = () => {
+
     const { t } = useTranslation();
 
-    const history = useHistory();
 
     return (
         <>
@@ -34,7 +24,7 @@ const Header = () => {
                                 <Link className="nav-link active" aria-current="page" to='/'>{t('description.home')}</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/about' tabIndex={-1} aria-disabled="true">{t('description.url')}</Link>
+                                <Link className="nav-link" to={`/${t('description.short_name')}/${t('description.url')}`} tabIndex={-1} aria-disabled="true">{t('description.url')}</Link>
                             </li>
                         </ul>
                     </div>
