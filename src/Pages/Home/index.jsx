@@ -54,7 +54,7 @@ const Home = () => {
         return array.reduce((obj, item) => {
             return {
                 ...obj,
-                [item[key]]: item,
+                [item.translation.description.short_name]: item,
             };
         }, initialValue);
     };
@@ -63,25 +63,29 @@ const Home = () => {
         //////////////////////////////////////////////////////////////////////////////////////////Retreiving firebase data from web
         // Now retreiving the data
         //////////////////////////////Here all data retreiving is working////////////////////////////
-        const db = firebase.firestore();
-        //Data Retreiving for Auth
-        db.collection(`Languages`)
-            .get()
-            .then(snapshot => {
-                let data = [];
-                snapshot.forEach(element => {
-                    data.push(Object.assign({
-                        "id": element.id,
-                        "translation": element.translation
-                    }, element.data()))
-                })
+        // const db = firebase.firestore();
+        // //Data Retreiving for Auth
+        // db.collection(`Languages`)
+        //     .get()
+        //     .then(snapshot => {
+        //         let data = [];
+        //         snapshot.forEach(element => {
+        //             data.push(Object.assign({
+        //                 "id": element.id,
+        //                 "translation": element.translation
+        //             }, element.data()))
+        //         })
 
-                console.log(`data for current selected user `, data);
-                for(let i = 0 ;i<data.length;i++)
-                {
-                    console.log(data[i].translation.description.short_name);
-                }
-            })
+        //         const language_array = [];
+
+        //         for (let i = 0; i < data.length; i++) {
+        //             //console.log(data[i].translation.description.short_name);
+        //             let language_label = data[i].translation.description.short_name;
+        //             language_array.push(language_label);
+        //         }
+        //         console.log(language_array);
+        //         console.log(`data for current selected user `, convertArrayToObject(data, 1));
+        //     })
         //////////////////////////////////////////////////////////////////////////////////////////Retreiving firebase data from web
 
         if (change) {
@@ -232,7 +236,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <button className="btn btn-primary btn-lg" onClick={addData}>Add Data</button>
+            {/* <button className="btn btn-primary btn-lg" onClick={addData}>Add Data</button> */}
 
             <br />
         </>
