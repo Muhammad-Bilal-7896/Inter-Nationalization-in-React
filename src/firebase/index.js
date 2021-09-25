@@ -1,6 +1,6 @@
-import firebase from 'firebase/app'
-import 'firebase/storage'
-import 'firebase/database'
+import firebase from 'firebase/app';
+import 'firebase/storage';
+import 'firebase/database';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v9.0 and later, measurementId is optional
 
