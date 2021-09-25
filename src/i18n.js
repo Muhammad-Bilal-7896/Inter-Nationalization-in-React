@@ -3,9 +3,13 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 
-const fun = () => {
+//Importing Firebase 
+import firebase from 'firebase';
+import 'firebase/firestore';
+import { query, orderBy } from "firebase/firestore";
+import 'firebase/auth';
 
-    
+const fun = () => {
 
     //Resources Object
     const Resources = {
