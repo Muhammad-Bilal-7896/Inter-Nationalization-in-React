@@ -7,6 +7,13 @@ import { useTranslation, Trans } from 'react-i18next';
 //Setting the use history hook
 import { useLocation, useHistory } from 'react-router-dom';
 
+//Importing Firebase 
+import firebase from "../../firebase";
+import 'firebase/firestore';
+import { query, orderBy } from "firebase/firestore";
+import 'firebase/auth';
+
+
 const lngs = {
     en: { nativeName: 'English' },
     de: { nativeName: 'Deutsch' },
@@ -43,6 +50,28 @@ const Home = () => {
     }
 
     useEffect(() => {
+
+        //////////////////////////////////////////////////////////////////////////////////////////Retreiving firebase data from web
+        // Now retreiving the data
+        //////////////////////////////Here all data retreiving is working////////////////////////////
+        const db = firebase.firestore();
+
+        //Data Retreiving for Auth
+        db.collection(`Data/Auth/AuthorizedEmails`)
+            .get()
+            .then(snapshot => {
+                let data = [];
+                snapshot.forEach(element => {
+                    data.push(Object.assign({
+                        "id": element.id,
+                        "name": element.name,
+                        "email": element.email,
+                    }, element.data()))
+                })
+                console.log(`data for current selected user `, data);
+            })
+        //////////////////////////////////////////////////////////////////////////////////////////Retreiving firebase data from web
+
         if (change) {
             if (window.location.pathname === '/de') {
                 i18n.changeLanguage("de");
