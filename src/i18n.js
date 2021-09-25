@@ -4,6 +4,9 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 
 const fun = () => {
+
+    
+
     //Resources Object
     const Resources = {
         en: {
