@@ -46,7 +46,7 @@ function AppRouter() {
     })
 
     return (
-        <Router>translations/en/website.json
+        <Router>
             <Route exact path="/" component={Home} />
             <Route exact path="/translations/en/website.json" component={Home} />
             <Route exact path="/translations/de/website.json" component={Home} />

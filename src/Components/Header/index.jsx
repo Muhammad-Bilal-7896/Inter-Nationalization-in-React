@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 
 const Header = () => {
-
     const { t } = useTranslation();
-
 
     return (
         <>
