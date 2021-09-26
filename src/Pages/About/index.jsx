@@ -42,7 +42,7 @@ const About = () => {
         //alert("Changed");
     }
 
-    useEffect(() => {/translations/ar/حول/website.json
+    useEffect(() => {
         if (change) {
             if (window.location.pathname === '/translations/de/Über/website.json') {
                 i18n.changeLanguage("de");

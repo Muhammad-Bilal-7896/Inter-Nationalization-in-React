@@ -16,33 +16,33 @@ function AppRouter() {
     const { t } = useTranslation();
 
     useEffect(() => {
-        if (change) {
-            if (window.location.pathname === `/de/${t('description.url')}`) {
-                i18n.changeLanguage("de");
-                //                alert("de")
-                setChange(false);
-            }
-            else if (window.location.pathname === `/en/${t('description.url')}`) {
-                i18n.changeLanguage(`en`);
-                //                alert("en");
-                setChange(false);
-            }
-            else if (window.location.pathname === `/chi/${t('description.url')}`) {
-                i18n.changeLanguage("chi");
-                //                alert("chi")
-                setChange(false);
-            }
-            else if (window.location.pathname === `/ar/${t('description.url')}`) {
-                i18n.changeLanguage("ar");
-                //                alert("ar")
-                setChange(false);
-            }
-            else if (window.location.pathname === `/about`) {
-                i18n.changeLanguage("en");
-                //                alert("ar")
-                setChange(false);
-            }
-        }
+        // if (change) {
+        //     if (window.location.pathname === `/de/${t('description.url')}`) {
+        //         i18n.changeLanguage("de");
+        //         //                alert("de")
+        //         setChange(false);
+        //     }
+        //     else if (window.location.pathname === `/en/${t('description.url')}`) {
+        //         i18n.changeLanguage(`en`);
+        //         //                alert("en");
+        //         setChange(false);
+        //     }
+        //     else if (window.location.pathname === `/chi/${t('description.url')}`) {
+        //         i18n.changeLanguage("chi");
+        //         //                alert("chi")
+        //         setChange(false);
+        //     }
+        //     else if (window.location.pathname === `/ar/${t('description.url')}`) {
+        //         i18n.changeLanguage("ar");
+        //         //                alert("ar")
+        //         setChange(false);
+        //     }
+        //     else if (window.location.pathname === `/about`) {
+        //         i18n.changeLanguage("en");
+        //         //                alert("ar")
+        //         setChange(false);
+        //     }
+        // }
     })
 
     return (
