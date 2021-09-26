@@ -35,7 +35,7 @@ const Home = () => {
         setCurrentLanguage(e);
         i18n.changeLanguage(e);
         if (e === 'de') {
-            `/translations/de/website.json`
+            //`/translations/de/website.json`
             history.push(`/translations/${e}/website.json`);
         }
         else if (e === 'en') {

@@ -52,7 +52,7 @@ function AppRouter() {
             <Route exact path="/translations/de/website.json" component={Home} />
             <Route exact path="/translations/chi/website.json" component={Home} />
             <Route exact path="/translations/ar/website.json" component={Home} />
-            `/translations/en/${t('description.url')}/website.json`
+            {/* `/translations/en/${t('description.url')}/website.json` */}
             <Route exact path={`/translations/en/${t('description.url')}/website.json`} component={About} />
             <Route exact path={`/translations/de/${t('description.url')}/website.json`} component={About} />
             <Route exact path={`/translations/chi/${t('description.url')}/website.json`} component={About} />
