@@ -46,16 +46,17 @@ function AppRouter() {
     })
 
     return (
-        <Router>
+        <Router>translations/en/website.json
             <Route exact path="/" component={Home} />
-            <Route exact path="/en" component={Home} />
-            <Route exact path="/de" component={Home} />
-            <Route exact path="/chi" component={Home} />
-            <Route exact path="/ar" component={Home} />
-            <Route exact path={`/en/${t('description.url')}`} component={About} />
-            <Route exact path={`/de/${t('description.url')}`} component={About} />
-            <Route exact path={`/chi/${t('description.url')}`} component={About} />
-            <Route exact path={`/ar/${t('description.url')}`} component={About} />
+            <Route exact path="/translations/en/website.json" component={Home} />
+            <Route exact path="/translations/de/website.json" component={Home} />
+            <Route exact path="/translations/chi/website.json" component={Home} />
+            <Route exact path="/translations/ar/website.json" component={Home} />
+            `/translations/en/${t('description.url')}/website.json`
+            <Route exact path={`/translations/en/${t('description.url')}/website.json`} component={About} />
+            <Route exact path={`/translations/de/${t('description.url')}/website.json`} component={About} />
+            <Route exact path={`/translations/chi/${t('description.url')}/website.json`} component={About} />
+            <Route exact path={`/translations/ar/${t('description.url')}/website.json`} component={About} />
             <Route exact path={`/about`} component={About} />
         </Router>
     )
