@@ -35,18 +35,18 @@ const Home = () => {
         setCurrentLanguage(e);
         i18n.changeLanguage(e);
         if (e === 'de') {
-            history.push(`/${e}`);
+            `/translations/${e}/website.json`
+            history.push(`/translations/${e}/website.json`);
         }
         else if (e === 'en') {
-            history.push(`/${e}`);
+            history.push(`/translations/${e}/website.json`);
         }
         else if (e === 'chi') {
-            history.push(`/${e}`);
+            history.push(`/translations/${e}/website.json`);
         }
         else if (e === 'ar') {
-            history.push(`/${e}`);
+            history.push(`/translations/${e}/website.json`);
         }
-        //alert("Changed");
     }
 
     const convertArrayToObject = (array, key) => {
