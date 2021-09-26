@@ -35,7 +35,7 @@ const Home = () => {
         setCurrentLanguage(e);
         i18n.changeLanguage(e);
         if (e === 'de') {
-            `/translations/${e}/website.json`
+            `/translations/de/website.json`
             history.push(`/translations/${e}/website.json`);
         }
         else if (e === 'en') {
@@ -89,22 +89,22 @@ const Home = () => {
         //////////////////////////////////////////////////////////////////////////////////////////Retreiving firebase data from web
 
         if (change) {
-            if (window.location.pathname === '/de') {
+            if (window.location.pathname === `/translations/de/website.json`) {
                 i18n.changeLanguage("de");
                 //                alert("de")
                 setChange(false);
             }
-            else if (window.location.pathname === '/en' || window.location.pathname === '/') {
+            else if (window.location.pathname === `/translations/en/website.json` || window.location.pathname === '/') {
                 i18n.changeLanguage("en");
                 //                alert("en");
                 setChange(false);
             }
-            else if (window.location.pathname === '/chi') {
+            else if (window.location.pathname === `/translations/chi/website.json`) {
                 i18n.changeLanguage("chi");
                 //                alert("chi")
                 setChange(false);
             }
-            else if (window.location.pathname === '/ar') {
+            else if (window.location.pathname === `/translations/ar/website.json`) {
                 i18n.changeLanguage("ar");
                 //                alert("ar")
                 setChange(false);
