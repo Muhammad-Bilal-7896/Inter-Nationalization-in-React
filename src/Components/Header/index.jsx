@@ -22,7 +22,7 @@ const Header = () => {
                                 <Link className="nav-link active" aria-current="page" to='/'>{t('description.home')}</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={`/translations/${t('description.short_name')}/${t('description.url')}/website.json`} tabIndex={-1} aria-disabled="true">{t('description.url')}</Link>
+                                <Link className="nav-link" to={`/${t('description.short_name')}/${t('description.url')}`} tabIndex={-1} aria-disabled="true">{t('description.url')}</Link>
                             </li>
                         </ul>
                     </div>
