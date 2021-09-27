@@ -36,16 +36,16 @@ const Home = () => {
         i18n.changeLanguage(e);
         if (e === 'de') {
             //`/translations/de/website.json`
-            history.push(`/translations/${e}/website.json`);
+            history.push(`/${e}`);
         }
         else if (e === 'en') {
-            history.push(`/translations/${e}/website.json`);
+            history.push(`/${e}`);
         }
         else if (e === 'chi') {
-            history.push(`/translations/${e}/website.json`);
+            history.push(`/${e}`);
         }
         else if (e === 'ar') {
-            history.push(`/translations/${e}/website.json`);
+            history.push(`/${e}`);
         }
     }
 
@@ -89,22 +89,22 @@ const Home = () => {
         //////////////////////////////////////////////////////////////////////////////////////////Retreiving firebase data from web
 
         if (change) {
-            if (window.location.pathname === `/translations/de/website.json`) {
+            if (window.location.pathname === `/de`) {
                 i18n.changeLanguage("de");
                 //                alert("de")
                 setChange(false);
             }
-            else if (window.location.pathname === `/translations/en/website.json` || window.location.pathname === '/') {
+            else if (window.location.pathname === `/en` || window.location.pathname === '/') {
                 i18n.changeLanguage("en");
                 //                alert("en");
                 setChange(false);
             }
-            else if (window.location.pathname === `/translations/chi/website.json`) {
+            else if (window.location.pathname === `/chi`) {
                 i18n.changeLanguage("chi");
                 //                alert("chi")
                 setChange(false);
             }
-            else if (window.location.pathname === `/translations/ar/website.json`) {
+            else if (window.location.pathname === `/ar`) {
                 i18n.changeLanguage("ar");
                 //                alert("ar")
                 setChange(false);

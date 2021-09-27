@@ -28,38 +28,38 @@ const About = () => {
         setCurrentLanguage(e);
         i18n.changeLanguage(e);
         if (e === 'de') {
-            history.push(`/translations/${e}/${t('description.url')}/website.json`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         else if (e === 'en') {
-            history.push(`/translations/${e}/${t('description.url')}/website.json`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         else if (e === 'chi') {
-            history.push(`/translations/${e}/${t('description.url')}/website.json`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         else if (e === 'ar') {
-            history.push(`/translations/${e}/${t('description.url')}/website.json`);
+            history.push(`/${e}/${t('description.url')}`);
         }
         //alert("Changed");
     }
 
     useEffect(() => {
         if (change) {
-            if (window.location.pathname === '/translations/de/Über/website.json') {
+            if (window.location.pathname === '/de/Über') {
                 i18n.changeLanguage("de");
                 // alert("de")
                 setChange(false);
             }
-            else if (window.location.pathname === '/translations/en/about/website.json' || window.location.pathname === '/about') {
+            else if (window.location.pathname === '/en/about' || window.location.pathname === '/about') {
                 i18n.changeLanguage("en");
                 // alert("en")
                 setChange(false);
             }
-            else if (window.location.pathname === '/translations/chi/关于/website.json') {
+            else if (window.location.pathname === '/chi/关于') {
                 i18n.changeLanguage("chi");
                 // alert("chi")
                 setChange(~false);
             }
-            else if (window.location.pathname === '/translations/ar/حول/website.json') {
+            else if (window.location.pathname === '/ar/حول') {
                 i18n.changeLanguage("ar");
                 // alert("ar")
                 setChange(false);
