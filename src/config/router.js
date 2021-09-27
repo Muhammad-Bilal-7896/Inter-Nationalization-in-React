@@ -48,7 +48,7 @@ function AppRouter() {
     return (
         <Router>
             <Route exact path="/" component={Home} />
-            <Route exact path="/translations/en/website.json" component={Home} />
+            <Route exact path="/en/website.json" component={Home} />
             <Route exact path="/translations/de/website.json" component={Home} />
             <Route exact path="/translations/chi/website.json" component={Home} />
             <Route exact path="/translations/ar/website.json" component={Home} />
