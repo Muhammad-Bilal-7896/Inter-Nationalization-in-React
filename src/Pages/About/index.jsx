@@ -5,7 +5,7 @@ import i18n from "../../i18n";
 //Importing useTranslation and Trans from react-i18next
 import { useTranslation, Trans } from 'react-i18next';
 //Setting the use history hook
-import { useLocation, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const lngs = {
     en: { nativeName: 'English' },
@@ -15,57 +15,15 @@ const lngs = {
 };
 
 const About = () => {
-    const [currentLanguage, setCurrentLanguage] = useState("");
-    const [change, setChange] = useState(true);
 
     const { t } = useTranslation();
 
     const history = useHistory();
-    // const location = useLocation();
-    // const { pathname } = location;
 
     const changeTheLanguage = (e) => {
-        setCurrentLanguage(e);
         i18n.changeLanguage(e);
-        if (e === 'de') {
-            history.push(`/${e}/${t('description.url')}`);
-        }
-        else if (e === 'en') {
-            history.push(`/${e}/${t('description.url')}`);
-        }
-        else if (e === 'chi') {
-            history.push(`/${e}/${t('description.url')}`);
-        }
-        else if (e === 'ar') {
-            history.push(`/${e}/${t('description.url')}`);
-        }
-        //alert("Changed");
+        history.push(`/${e}/${t('description.url')}`);
     }
-
-    useEffect(() => {
-        if (change) {
-            if (window.location.pathname === '/de/Über') {
-                i18n.changeLanguage("de");
-                // alert("de")
-                setChange(false);
-            }
-            else if (window.location.pathname === '/en/about' || window.location.pathname === '/about') {
-                i18n.changeLanguage("en");
-                // alert("en")
-                setChange(false);
-            }
-            else if (window.location.pathname === '/chi/关于') {
-                i18n.changeLanguage("chi");
-                // alert("chi")
-                setChange(~false);
-            }
-            else if (window.location.pathname === '/ar/حول') {
-                i18n.changeLanguage("ar");
-                // alert("ar")
-                setChange(false);
-            }
-        }
-    })
 
     return (
         <>

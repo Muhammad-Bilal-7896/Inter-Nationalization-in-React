@@ -1,11 +1,11 @@
 import React from "react";
-import AppRouter from './config/router'
+import AppRouter from "./config/router";
 
-const App = () => {
+function App() {
   return (
-    <div>
-        <AppRouter/>
-    </div>
+    <>
+      <AppRouter />
+    </>
   );
 }
 
