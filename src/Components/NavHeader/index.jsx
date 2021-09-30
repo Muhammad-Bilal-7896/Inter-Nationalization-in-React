@@ -1,8 +1,7 @@
 import React from "react";
-import i18n from "../../i18n";
 //Importing useTranslation and Trans from react-i18next
-import { useTranslation, Trans } from 'react-i18next';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router-dom';
 import "./style.scss";
 
 const lngs = {
