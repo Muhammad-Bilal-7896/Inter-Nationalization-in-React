@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../Components/Header";
 import NavHheader from "../../Components/NavHeader";
 import i18n from "../../i18n";
@@ -24,8 +24,21 @@ const Home = () => {
 
     const changeTheLanguage = (e) => {
         i18n.changeLanguage(e);
-        history.push(`/${e}`);
+        if (e == "en") {
+            history.push(`/`);
+        }
+        else{
+            history.push(`/${e}`);
+        }
     }
+
+    useEffect(()=>{
+        // if(window.location.pathname === "/en")
+        // {
+        //     console.log(window.location.pathname);
+           
+        // }
+    },[])
 
     return (
         <>

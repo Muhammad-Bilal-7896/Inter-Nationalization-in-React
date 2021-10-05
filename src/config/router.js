@@ -18,7 +18,9 @@ function AppRouter() {
   return (
     <div>
       <Router>
+        <Route exact path={"/"} component={Home} />
         <Route exact path={baseRouteUrl + "/"} component={Home} />
+        <Route exact path={"/about"} component={About} />
         <Route path={`${baseRouteUrl}/${t('description.url')}`} component={About} />
       </Router>
     </div>

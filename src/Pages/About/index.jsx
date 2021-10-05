@@ -22,7 +22,12 @@ const About = () => {
 
     const changeTheLanguage = (e) => {
         i18n.changeLanguage(e);
-        history.push(`/${e}/${t('description.url')}`);
+        if (e == "en") {
+            history.push(`/about`);
+        }
+        else {
+            history.push(`/${e}/${t('description.url')}`);
+        }
     }
 
     return (
