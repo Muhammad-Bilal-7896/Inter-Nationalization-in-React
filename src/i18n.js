@@ -3,10 +3,10 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next';
 
 //Importing Languages
-import English from './LanguageJsonFiles/en';
-import Germany from './LanguageJsonFiles/de';
-import Chinese from './LanguageJsonFiles/chi';
-import Arabic from './LanguageJsonFiles/ar';
+import English from './LanguageJsonFiles/en/index.json';
+import Germany from './LanguageJsonFiles/de/index.json';
+import Chinese from './LanguageJsonFiles/chi/index.json';
+import Arabic from './LanguageJsonFiles/ar/index.json';
 
 i18n.on('languageChanged', function (lng) {
     // if the language we switched to is the default language we need to remove the /en from URL

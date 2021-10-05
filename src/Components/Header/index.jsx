@@ -2,11 +2,23 @@ import React,{useState,useEffect} from "react";
 import i18n from "../../i18n";
 //Importing useTranslation and Trans from react-i18next
 import { useTranslation, Trans } from 'react-i18next';
-import { Link } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import "./style.scss";
 
 const Header = () => {
     const { t } = useTranslation();
+
+    const history = useHistory();
+
+    const goTo = () => {
+        if(t('description.short_name')=="en")
+        {
+            history.push(`/about`);
+        }
+        else{
+            history.push(`/${t('description.short_name')}/${t('description.url')}`);
+        }
+    }
 
     return (
         <>
@@ -22,7 +34,7 @@ const Header = () => {
                                 <Link className="nav-link active" aria-current="page" to='/'>{t('description.home')}</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={`/${t('description.short_name')}/${t('description.url')}`} tabIndex={-1} aria-disabled="true">{t('description.url')}</Link>
+                                <span style={{cursor:"pointer"}} className="nav-link" onClick={goTo} tabIndex={-1} aria-disabled="true">{t('description.url')}</span>
                             </li>
                         </ul>
                     </div>
