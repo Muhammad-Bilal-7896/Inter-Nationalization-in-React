@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 
 //Importing Pages 
 import Home from "../Pages/Home";
@@ -15,16 +15,19 @@ function AppRouter() {
 
   const { t } = useTranslation();
 
+  useEffect(() => {
+    console.log("The base url is equal to : ", baseRouteUrl);
+  })
+
   return (
     <div>
       <Router>
-        <Route exact path={"/"} component={Home} />
-        {(baseRouteUrl === "/") ? (
-          <Route exact path={baseRouteUrl + "/"} component={Home} />
-        ) : (
+        <Route exact path={baseRouteUrl + "/"} component={Home} />
+        {/* {(baseRouteUrl === "/") ? (
           <></>
-        )}
-
+        ) : (
+          <Route exact path={baseRouteUrl + "/"} component={Home} />
+        )} */}
         <Route exact path={"/about"} component={About} />
         <Route path={`${baseRouteUrl}/${t('description.url')}`} component={About} />
       </Router>
